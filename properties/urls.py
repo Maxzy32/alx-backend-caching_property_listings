@@ -1,9 +1,6 @@
-from django.urls import path, include
-from .views import PropertyListView
-from django.contrib import admin
+from django.urls import path
+from .views import property_list
 
 urlpatterns = [
-    path('', PropertyListView.as_view(), name='property_list'),
-    path('admin/', admin.site.urls),
-    path('properties/', include('properties.urls')),
+    path('', property_list, name='property_list'),
 ]
